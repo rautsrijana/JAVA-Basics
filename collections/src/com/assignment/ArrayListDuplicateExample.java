@@ -1,13 +1,13 @@
-package com.arraylist;
-
+package com.assignment;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ArrayNumbers {
-    
-    public static void main(String[] args) {
+import com.arraylist.SortIntegersInDescendongOrderComparator;
+
+public class ArrayListDuplicateExample {
+	public static void main(String[] args) {
         List<Integer> listofNumbers = new ArrayList<>();
         
         // Add 5 integers to the list
@@ -27,5 +27,5 @@ public class ArrayNumbers {
 		System.out.println(listofNumbers);
 //        SortIntegersInDescendingOrderComparator()
     }
-}
 
+}
