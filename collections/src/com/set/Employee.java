@@ -43,10 +43,10 @@ public class Employee {
 		return "Employee [name=" + name + ", age=" + age + ", salary=" + salary + "]";
 	}	
 	
-//	@Override
-////	public int hashCode() {
-////		return Objects.hash(age, name, salary);
-////	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(age, name, salary);
+	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
