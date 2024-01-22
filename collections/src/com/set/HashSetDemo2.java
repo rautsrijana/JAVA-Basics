@@ -23,7 +23,7 @@ public class HashSetDemo2 {
 		setofEmployee.add(emp1);
 		setofEmployee.add(emp2);
 		setofEmployee.add(emp3);
-		setofEmployee.add(emp4);// will be added only when 
+		setofEmployee.add(emp4); ///will be added only when you have not overridden hashcode() and equals()
 		System.out.println(setofEmployee);
 	}
 }

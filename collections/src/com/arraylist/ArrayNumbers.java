@@ -20,8 +20,8 @@ public class ArrayNumbers {
         System.out.println("Original Numbers: " + listofNumbers);
         
         // Sort the ArrayList of integers in descending order
-        Collections.sort(listofNumbers, Collections.reverseOrder());
-        System.out.println("Sorted Numbers in Descending Order: " + listofNumbers);
+//        Collections.sort(listofNumbers, Collections.reverseOrder());
+//        System.out.println("Sorted Numbers in Descending Order: " + listofNumbers);
         
         Collections.sort(listofNumbers,new SortIntegersInDescendongOrderComparator());
 		System.out.println(listofNumbers);
