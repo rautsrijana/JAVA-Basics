@@ -23,7 +23,7 @@ public class TreeSetDemo1 {
 		System.out.println(tset1);
 		
 		// not a default ie., coustom one
-		Set<Integer> tset2 = new TreeSet<>(new SortDescendingComparator()); 
+		Set<Integer> tset2 = new TreeSet<>(new TreeSortDescendingComparator()); 
 		
 		tset2.add(4);
 		tset2.add(10);

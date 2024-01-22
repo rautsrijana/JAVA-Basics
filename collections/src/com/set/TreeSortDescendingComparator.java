@@ -2,7 +2,7 @@ package com.set;
 
 import java.util.Comparator;
 
-public class SortDescendingComparator implements Comparator<Integer>{
+public class TreeSortDescendingComparator implements Comparator<Integer>{
 
 	@Override
 	public int compare(Integer o1, Integer o2) {
