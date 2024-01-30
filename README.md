@@ -1,9 +1,8 @@
 # JAVA-Basics
 
-This repo contains the JAVA materials that i have Practised so far. 
+This repository holds the Java materials I've worked on to date. It includes:
 
-* Basic class method example
-
+* Example of a Basic Class Method
 * Creating Servlet Example
     * Login Page
     * Sign up page 
