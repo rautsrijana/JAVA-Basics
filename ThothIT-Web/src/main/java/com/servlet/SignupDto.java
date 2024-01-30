@@ -1,13 +1,10 @@
 package com.servlet;
 
-public class SignuptoDo {
-
+public class SignupDto {
 	private String username;
 	private String password;
 	private String email;
 	private String gender;
-	
-	
 	public String getUsername() {
 		return username;
 	}
@@ -32,17 +29,18 @@ public class SignuptoDo {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public SignuptoDo(String username, String password, String email, String gender) {
+	@Override
+	public String toString() {
+		return "SignupDto [username=" + username + ", password=" + password + ", email=" + email + ", gender=" + gender
+				+ "]";
+	}
+	public SignupDto(String username, String password, String email, String gender) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.email = email;
 		this.gender = gender;
 	}
-	
-	SignuptoDo(){
-		
-	}
-	
-	
+	SignupDto(){}
+
 }

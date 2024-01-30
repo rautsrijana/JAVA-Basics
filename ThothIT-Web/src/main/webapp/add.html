@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Addition Calculator</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('images/code.jpeg');
+        }
+        .form-container {
+            text-align: center;
+            background-color: silver;     
+            padding: 20px;
+        }
+        label, input {
+            margin: 20px;
+            padding: 8px 15px;
+        }
+        button {
+            padding: 10px 20px;
+            border-style: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Simple Addition Calculator</h2>
+        <form action="additionresult" method="post"> 
+            <div>
+                <label for="num1">First Number:</label>
+                <input type="number" name="num1" required>
+            </div>
+            <div>
+                <label for="num2">Second Number:</label>
+                <input type="number" name="num2" required>
+            </div>
+            <div>
+                <button type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
