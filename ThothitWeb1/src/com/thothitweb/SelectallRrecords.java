@@ -20,8 +20,8 @@ public class SelectallRrecords {
 	System.out.println("connection has been created");
 	
 	//step 3: fire the query
-	String insertquery="select * from users";
-	PreparedStatement ps= conn.prepareStatement(insertquery);
+	String selectQuery="select * from users";
+	PreparedStatement ps= conn.prepareStatement(selectQuery);
 	
 	ResultSet rs = ps.executeQuery();
 	while(rs.next()) {

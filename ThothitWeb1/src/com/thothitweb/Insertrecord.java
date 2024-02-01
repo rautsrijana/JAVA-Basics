@@ -21,9 +21,9 @@ public class Insertrecord {
 	//step 3: fire the query
 	String insertquery="insert into users(username,password,email) values(?,?,?)";
 	PreparedStatement ps= conn.prepareStatement(insertquery);
-	ps.setString(1, "Hari");
-	ps.setString(2, "hari123");
-	ps.setString(3, "hari@gmail.com");
+	ps.setString(1, "HEM");
+	ps.setString(2, "hemi123");
+	ps.setString(3, "hem@gmail.com");
 
 	int i =ps.executeUpdate();
 	if(i>0) {

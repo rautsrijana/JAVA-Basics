@@ -19,14 +19,14 @@ public class UpdateRecord {
 	System.out.println("connection has been created");
 	
 	//step 3: fire the query
-	String insertquery="update into users set username='Ritika' where id=7";
-	PreparedStatement ps= conn.prepareStatement(insertquery);
+	String updateQuery="UPDATE users SET username='Ritika' WHERE id=3";
+	PreparedStatement ps= conn.prepareStatement(updateQuery);
 	
 	int i =ps.executeUpdate();
 	if(i>0) {
-		System.out.println("record has been inserted");
+		System.out.println("record has been updated");
 	}else {
-		System.out.println("record has not been inserted");
+		System.out.println("record has not been updated");
 	}
 		}
 	
