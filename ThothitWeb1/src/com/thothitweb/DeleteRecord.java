@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class Insertrecord {
+public class DeleteRecord {
 
 	public static void main(String[] args) {
 		
@@ -19,15 +19,13 @@ public class Insertrecord {
 	System.out.println("connection has been created");
 	
 	//step 3: fire the query
-	String insertquery="insert into users(username,password,email) values(?,?,?)";
+	String insertquery="delete from users  where id= ?";
 	PreparedStatement ps= conn.prepareStatement(insertquery);
-	ps.setString(1, "Hari");
-	ps.setString(2, "hari123");
-	ps.setString(3, "hari@gmail.com");
-
+	ps.setInt(1, 2);
+	
 	int i =ps.executeUpdate();
 	if(i>0) {
-		System.out.println("record has been inserted");
+		System.out.println("record has been deleted");
 	}else {
 		System.out.println("record has not been inserted");
 	}

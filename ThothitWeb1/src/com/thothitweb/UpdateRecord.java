@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class Insertrecord {
+public class UpdateRecord {
 
 	public static void main(String[] args) {
 		
@@ -19,12 +19,9 @@ public class Insertrecord {
 	System.out.println("connection has been created");
 	
 	//step 3: fire the query
-	String insertquery="insert into users(username,password,email) values(?,?,?)";
+	String insertquery="update into users set username='Ritika' where id=7";
 	PreparedStatement ps= conn.prepareStatement(insertquery);
-	ps.setString(1, "Hari");
-	ps.setString(2, "hari123");
-	ps.setString(3, "hari@gmail.com");
-
+	
 	int i =ps.executeUpdate();
 	if(i>0) {
 		System.out.println("record has been inserted");

@@ -3,8 +3,9 @@ package com.thothitweb;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-public class Insertrecord {
+public class SelectallRrecords {
 
 	public static void main(String[] args) {
 		
@@ -19,17 +20,13 @@ public class Insertrecord {
 	System.out.println("connection has been created");
 	
 	//step 3: fire the query
-	String insertquery="insert into users(username,password,email) values(?,?,?)";
+	String insertquery="select * from users";
 	PreparedStatement ps= conn.prepareStatement(insertquery);
-	ps.setString(1, "Hari");
-	ps.setString(2, "hari123");
-	ps.setString(3, "hari@gmail.com");
-
-	int i =ps.executeUpdate();
-	if(i>0) {
-		System.out.println("record has been inserted");
-	}else {
-		System.out.println("record has not been inserted");
+	
+	ResultSet rs = ps.executeQuery();
+	while(rs.next()) {
+		System.out.println(rs.getInt(1)+ " " +rs.getString(2)+" " +rs.getString(3)+" " +rs.getString(4)+" ");
+		
 	}
 		}
 	
