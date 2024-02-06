@@ -25,6 +25,7 @@ public class SignupServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String email = req.getParameter("email");
+        String gender = req.getParameter("gender");
        
         
         try {
@@ -33,17 +34,17 @@ public class SignupServlet extends HttpServlet {
 			System.out.println("driver is loaded successfully");
 			
 			//step 2  create the connection
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/thothitweb_db","root","Shree@18");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_signup","root","Shree@18");
 		System.out.println("connection has been created");
 		
 		//step 3 fire the query
-		String sql="insert into users(username,password,email) values(?,?,?)";
+		String sql="insert into users(username,password,email, gender) values(?,?,?,?)";
 		PreparedStatement pstm = conn.prepareStatement(sql);
 		//set the value in placeholder
 		pstm.setString(1, username);
 		pstm.setString(2, password);
 		pstm.setString(3, email);
-//		pstm.setString(4, gender);
+		pstm.setString(4, gender);
 		pstm.executeUpdate();
 		System.out.println("inserted successfully");
 		
