@@ -35,22 +35,22 @@ public class SignupServlet extends HttpServlet {
 			
 			//step 2  create the connection
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_signup","root","Shree@18");
-		System.out.println("connection has been created");
-		
-		//step 3 fire the query
-		String sql="insert into users(username,password,email, gender) values(?,?,?,?)";
-		PreparedStatement pstm = conn.prepareStatement(sql);
-		//set the value in placeholder
-		pstm.setString(1, username);
-		pstm.setString(2, password);
-		pstm.setString(3, email);
-		pstm.setString(4, gender);
-		pstm.executeUpdate();
-		System.out.println("inserted successfully");
-		
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+			System.out.println("connection has been created");
+			
+			//step 3 fire the query
+			String sql="insert into users(username,password,email, gender) values(?,?,?,?)";
+			PreparedStatement pstm = conn.prepareStatement(sql);
+			//set the value in placeholder
+			pstm.setString(1, username);
+			pstm.setString(2, password);
+			pstm.setString(3, email);
+			pstm.setString(4, gender);
+			pstm.executeUpdate();
+			System.out.println("inserted successfully");
+			
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
         
 //        SignupDto signupdto = new SignupDto(username, password, email, gender);
 //        signuplist.add(signupdto);

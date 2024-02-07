@@ -15,10 +15,12 @@
 <header style="background-color: maroon; height:20px;">
 </header>
 <h1 style="background-color: aqua;">Displaying data</h1>
-<marquee direction="left">
-<img src="https://www.lingayasvidyapeeth.edu.in/sanmax/wp-content/uploads/2023/07/studentlife.webp"/ style="height:240px;">
-<img src="images/students.jpg"/ style="height:240px;">
-</marquee>
+
+<div style="text-align: center;">
+    <img src="https://www.caredocs.co.uk/wp-content/uploads/2021/02/CareDocs-Benefit-Easy-to-Retrieve-Data.png" style="height:240px;">
+</div>
+
+
 <h1 style="color:red;">${message }</h1>
 <h2>${email }</h2>
 
@@ -26,7 +28,7 @@
 <table class="table table-striped">
     <thead>
       <tr>
-      <th>id</th>
+      	<th>id</th>
         <th>Username</th>
         <th>Password</th>
         <th>Email</th>

@@ -44,6 +44,13 @@ public class SignupDto {
 		return "SignupDto [username=" + username + ", password=" + password + ", email=" + email + ", gender=" + gender
 				+ "]";
 	}
+	public SignupDto(String username, String password, String email, String gender) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.gender = gender;
+	}
 	public SignupDto(int id,String username, String password, String email, String gender) {
 		super();
 		this.id= id;

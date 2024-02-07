@@ -32,6 +32,8 @@ public class ShowSignupServlet extends HttpServlet{
 			//step 3 fire the query
 			String sql="select id,username,password,email,gender from users";
 			PreparedStatement pstm = conn.prepareStatement(sql);
+			
+//			pstm.execute();
 			ResultSet rs= pstm.executeQuery();
 			while(rs.next()) {
 				SignupDto signupdto = new SignupDto(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
@@ -45,10 +47,10 @@ public class ShowSignupServlet extends HttpServlet{
 		}
 		
 		req.setAttribute("message", "data has been retrieved");
-		
+	
 		req.setAttribute("sdata", signupdtos);
 		req.getRequestDispatcher("slist.jsp").forward(req, resp);
-		
+	
 	}
 
 }
