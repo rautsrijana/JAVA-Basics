@@ -54,6 +54,16 @@
      <td><%=ss.getPassword() %></td>
       <td><%=ss.getEmail() %></td>
        <td><%=ss.getGender() %></td>
+       <td>
+       <a href="dsignup?id=<%=ss.getId()%>">
+    	<button type="button" class="btn btn-primary">Delete</button>
+		</a>
+
+		<a href="usignup?id=<%=ss.getId()%>">
+    	<button type="button" class="btn btn-primary">Edit</button>
+		</a>
+		</td>
+       
        
        </tr>
        <%

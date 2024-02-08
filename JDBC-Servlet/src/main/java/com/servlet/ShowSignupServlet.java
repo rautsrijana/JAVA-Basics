@@ -23,11 +23,11 @@ public class ShowSignupServlet extends HttpServlet{
 		try {
 			//step 1 load the driver
 			Class.forName("com.mysql.jdbc.Driver");
-			System.out.println("driver is loaded successfully");
+			System.out.println("Data Show- driver is loaded successfully");
 			
 			//step 2  create the connection
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_signup","root","Shree@18");
-			System.out.println("connection has been created");
+			System.out.println("Data Show - connection has been created");
 			
 			//step 3 fire the query
 			String sql="select id,username,password,email,gender from users";

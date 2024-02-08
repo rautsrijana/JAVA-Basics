@@ -86,43 +86,42 @@
   </div>
   <div class="form-section">
     <div class="form-header">
-      Sign up
+      Update Registration
     </div>
-    <form action="SignupServlet" method="post">
+    <form action="update" method="post">
+    <input type="hidden" name="id" value="${user.id}">
    
       <div class="form-group">
         <label for="username">Your Name</label>
-        <input type="text" name="username" id="username" class="form-control">
+        <input type="text" name="username" id="username" class="form-control" value="${user.username}">
       </div>
       
-       <div class="form-group">
+      <div class="form-group">
         <label for="password">Password</label>
         <input type="password" name="password" id="password" class="form-control">
       </div>
       
       <div class="form-group">
         <label for="email">Your Email</label>
-        <input type="email" name="email" id="email" class="form-control">
+        <input type="email" name="email" id="email" class="form-control" value="${user.email}">
       </div>
       
       <div class="form-group">
         <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" id="genderMale" name="gender" class="custom-control-input" value="Male">
+          <input type="radio" id="genderMale" name="gender" class="custom-control-input" value="Male" ${user.gender == 'Male' ? 'checked' : ''}>
           <label class="custom-control-label" for="genderMale">Male</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" id="genderFemale" name="gender" class="custom-control-input" value="Female">
+          <input type="radio" id="genderFemale" name="gender" class="custom-control-input" value="Female" ${user.gender == 'Female' ? 'checked' : ''}>
           <label class="custom-control-label" for="genderFemale">Female</label>
         </div>
       </div>
-     
       
-     
       <div class="terms">
         <input type="checkbox" id="terms" name="terms">
         <label for="terms">I agree to the Terms of Service</label>
       </div>
-      <button type="submit" class="btn btn-secondary">Signup</button>
+      <button type="submit" class="btn btn-secondary" value="update">Signup</button>
       <a href="#" class="member-link">I am already a member</a>
     </form>
   </div>
