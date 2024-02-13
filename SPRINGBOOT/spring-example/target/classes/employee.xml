@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "https://www.springframework.org/schema/beans"
+   xmlns:xsi = "https://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "https://www.springframework.org/schema/beans
+   https://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!--  bean   - is object created by spring container -->
+    <bean id = "emp" class="com.model.Employee">
+        <property name="empid" value="123"></property>
+        <property name="empName" value="Srijana"></property>
+        <property name="email" value="srijana@gmail.com"></property>
+        <property name="age" value="23"></property>
+       <!--  ref - to achieve setter injection of one bean inside other bean -->
+        <property name="address" ref="addrs"></property>
+    </bean>
+    
+    <bean id = "addrs" class="com.model.Address">
+    	<property name="doorno" value="234"></property>
+        <property name="streetName" value="530 Elm street"></property>
+        <property name="city" value="sioux falls"></property>
+        <property name="country" value="USA"></property>
+    </bean>    
+</beans>
